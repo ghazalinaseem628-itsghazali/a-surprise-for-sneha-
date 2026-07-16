@@ -1,0 +1,697 @@
+/* ======================================
+   A Smile For Sneha ❤️
+   Premium Theme
+====================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#050505;
+color:#fff;
+overflow:hidden;
+width:100vw;
+height:100vh;
+}
+
+/* ---------- Sections ---------- */
+
+section{
+position:absolute;
+inset:0;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+padding:20px;
+opacity:0;
+visibility:hidden;
+transition:all .8s ease;
+}
+
+section.active{
+opacity:1;
+visibility:visible;
+}
+
+/* ---------- Stars ---------- */
+
+#stars{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle,#fff 1px,transparent 1px);
+background-size:60px 60px;
+opacity:.22;
+animation:moveStars 80s linear infinite;
+z-index:-3;
+}
+
+@keyframes moveStars{
+from{
+transform:translateY(0);
+}
+to{
+transform:translateY(-700px);
+}
+}
+
+/* ---------- Hearts ---------- */
+
+#hearts{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+z-index:-2;
+}
+
+.heart{
+position:absolute;
+bottom:-50px;
+font-size:18px;
+animation:floatHeart linear forwards;
+opacity:.85;
+}
+
+@keyframes floatHeart{
+
+0%{
+transform:translateY(0) scale(.5);
+opacity:0;
+}
+
+20%{
+opacity:1;
+}
+
+100%{
+transform:
+translateY(-120vh)
+rotate(360deg)
+scale(1.4);
+opacity:0;
+}
+
+}
+
+/* ---------- Flash ---------- */
+
+#flash{
+position:fixed;
+inset:0;
+background:#fff;
+opacity:0;
+pointer-events:none;
+transition:.4s;
+z-index:999;
+}
+
+/* ---------- Glass ---------- */
+
+.glass{
+
+width:min(90%,650px);
+
+padding:35px;
+
+border-radius:28px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.15);
+
+box-shadow:
+0 0 45px rgba(255,70,120,.18);
+
+text-align:center;
+
+}
+
+/* ---------- Headings ---------- */
+
+h1{
+
+font-size:52px;
+
+font-weight:700;
+
+line-height:1.4;
+
+text-shadow:
+0 0 18px rgba(255,70,120,.45);
+
+}
+
+h2{
+
+font-size:32px;
+
+margin-top:15px;
+
+}
+
+h3{
+
+font-size:18px;
+
+margin-bottom:18px;
+
+opacity:.85;
+
+}
+
+p{
+
+font-size:18px;
+
+line-height:1.8;
+
+margin-top:18px;
+
+opacity:.95;
+
+}/* ======================================
+   BUTTONS
+====================================== */
+
+button{
+
+padding:16px 42px;
+
+margin-top:28px;
+
+border:none;
+
+border-radius:50px;
+
+background:linear-gradient(135deg,#ff4d88,#ff80ab);
+
+color:white;
+
+font-size:18px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.35s;
+
+box-shadow:0 0 25px rgba(255,77,136,.4);
+
+}
+
+button:hover{
+
+transform:translateY(-3px) scale(1.05);
+
+box-shadow:0 0 45px rgba(255,77,136,.75);
+
+}
+
+button:active{
+
+transform:scale(.95);
+
+}
+
+/* ======================================
+COUNTDOWN
+====================================== */
+
+#countNumber{
+
+font-size:180px;
+
+font-weight:700;
+
+color:white;
+
+text-shadow:
+
+0 0 25px #ff4d88,
+
+0 0 60px #ff4d88;
+
+animation:pulse 1s infinite;
+
+}
+
+@keyframes pulse{
+
+50%{
+
+transform:scale(1.15);
+
+}
+
+}
+
+/* ======================================
+PHOTO GALLERY
+====================================== */
+
+#gallery{
+
+background:#000;
+
+}
+
+.gallery-container{overflow:hidden;
+    perspective:1000px;
+}
+.gallery-container::before{
+    content:"";
+    position:absolute;
+    inset:-2px;
+    border-radius:28px;
+    padding:2px;
+
+    background:linear-gradient(
+        45deg,
+        #ff4d88,
+        #ffb347,
+        #8a2be2,
+        #00d4ff,
+        #ff4d88
+    );
+
+    background-size:300% 300%;
+
+    animation:borderFlow 6s linear infinite;
+
+    opacity:.45;
+
+    z-index:-1;
+}
+
+.gallery-container{
+    position: relative;
+    width: 90%;
+    max-width: 430px;
+}
+
+#slideImage{
+   transform:rotateY(0deg) scale(1);
+transition:transform .8s ease;
+
+width:100%;
+
+border-radius:26px;
+
+transition:1s;
+
+box-shadow:
+
+0 0 45px rgba(255,77,136,.45);
+
+}
+.gallery-container:hover #slideImage{
+    transform:rotateY(5deg) scale(1.05);
+}
+
+.photoGlow{animation: glowPulse 2s ease-in-out infinite;
+
+position:absolute;
+
+inset:0;
+
+border-radius:26px;
+
+box-shadow:
+
+0 0 70px rgba(255,77,136,.18);
+
+pointer-events:none;
+
+}
+
+/* ======================================
+ENDING
+====================================== */
+
+#ending h1{
+
+font-size:44px;
+
+margin-bottom:15px;
+
+}
+
+#ending h2{
+
+font-size:30px;
+
+margin-top:10px;
+
+}
+
+#ending p{
+
+font-size:22px;
+
+color:#ff8fab;
+
+font-style:italic;
+
+margin-top:10px;
+
+}
+
+/* ======================================
+LOADER
+====================================== */
+
+#loader{
+
+position:fixed;
+
+inset:0;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+background:#050505;
+
+z-index:99999;
+
+}
+
+.loaderHeart{
+
+font-size:60px;
+
+animation:heartbeat 1s infinite;
+
+}
+
+@keyframes heartbeat{
+
+25%{
+
+transform:scale(1.2);
+
+}
+
+50%{
+
+transform:scale(.95);
+
+}
+
+75%{
+
+transform:scale(1.15);
+
+}
+
+}
+
+/* ======================================
+RESPONSIVE
+====================================== */
+
+@media(max-width:768px){
+
+h1{
+
+font-size:34px;
+
+}
+
+h2{
+
+font-size:26px;
+
+}
+
+p{
+
+font-size:16px;
+
+}
+
+#countNumber{
+
+font-size:110px;
+
+}
+
+.glass{
+
+padding:25px;
+
+}
+
+#slideImage{
+
+border-radius:20px;
+
+}
+
+button{
+
+font-size:16px;
+
+padding:14px 34px;
+
+}
+
+}
+/* ===== V2 Intro Animation ===== */
+
+#intro{
+background:
+radial-gradient(circle at top,#1c0f1f,#050505);
+}
+
+#intro .glass{
+animation:introFloat 3s ease-in-out infinite;
+}
+
+@keyframes introFloat{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-10px);
+}
+
+}
+
+#intro h1{
+
+animation:fadeUp 1.5s ease;
+
+}
+
+#intro p{
+
+animation:fadeUp 2s ease;
+
+}
+
+#startBtn{
+
+animation:buttonGlow 2s infinite;
+
+}
+
+@keyframes buttonGlow{
+
+0%{
+
+box-shadow:0 0 20px #ff4d88;
+
+}
+
+50%{
+
+box-shadow:0 0 45px #ff4d88;
+
+}
+
+100%{
+
+box-shadow:0 0 20px #ff4d88;
+
+}
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}.photoZoom{
+    animation: photoZoom 4s linear;
+}
+
+@keyframes photoZoom{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.08);
+    }
+}.spark{
+    position:fixed;
+    width:4px;
+    height:4px;
+    background:white;
+    border-radius:50%;
+    box-shadow:0 0 12px white;
+    animation:sparkMove linear forwards;
+    pointer-events:none;
+    z-index:999;
+}
+
+@keyframes sparkMove{
+
+0%{
+opacity:0;
+transform:translateY(0) scale(.5);
+}
+
+20%{
+opacity:1;
+}
+
+100%{
+opacity:0;
+transform:translateY(-180px) scale(1.6);
+}
+
+.lightSweep{
+position:absolute;
+top:0;
+left:-150%;
+width:25%;
+height:100%;
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.20),
+transparent
+);
+transform:skewX(-20deg);
+animation:lightSweep 2.5s linear infinite;
+pointer-events:none;
+opacity:0.18;
+filter:blur(20px);
+z-index:5;
+}
+
+@keyframes lightSweep{
+
+0%{
+left:-150%;
+}
+
+100%{
+left:160%;
+}
+
+}
+.flash{
+    animation:flashEffect .5s ease;
+}
+
+@keyframes flashEffect{
+
+    0%{
+        filter:brightness(1);
+    }
+
+    50%{
+        filter:brightness(1.45);
+    }
+
+    100%{
+        filter:brightness(1);
+    }
+
+}
+@keyframes glowPulse{
+
+    0%{
+        box-shadow:0 0 40px rgba(255,77,136,.15);
+    }
+
+    50%{
+        box-shadow:0 0 80px rgba(255,77,136,.35);
+    }
+
+    100%{
+        box-shadow:0 0 40px rgba(255,77,136,.15);
+    }
+
+}
+@keyframes borderFlow{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+
+}
+#ending{
+    animation: endingZoom 1.2s ease;
+    backdrop-filter: blur(12px);
+}
+
+@keyframes endingZoom{
+    0%{
+        opacity:0;
+        transform:scale(.8);
+    }
+
+    100%{
+        opacity:1;
+        transform:scale(1);
+    }
+}
