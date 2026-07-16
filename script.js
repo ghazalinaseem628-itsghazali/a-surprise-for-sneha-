@@ -241,16 +241,16 @@ displayMessage();
 
 const photos=[
 
-"image/photo1.jpg",
-"image/photo2.jpg",
-"image/photo3.jpg",
-"image/photo4.jpg",
-"image/photo5.jpg",
-"image/photo6.jpg",
-"image/photo7.jpg",
-"image/photo8.jpg",
-"image/photo9.jpg",
-"image/photo10.jpg"
+"photo1.jpg",
+"photo2.jpg",
+"photo3.jpg",
+"photo4.jpg",
+"photo5.jpg",
+"photo6.jpg",
+"photo7.jpg",
+"photo8.jpg",
+"photo9.jpg",
+"photo10.jpg"
 
 ];
 
